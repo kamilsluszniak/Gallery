@@ -1,0 +1,1 @@
+po rejestracji i po aktywacji nie pokazuje flasha z informacją że email wysłany
