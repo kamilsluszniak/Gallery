@@ -1,0 +1,140 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$dark-grey: #222222;
+
+.nav{
+  li{
+    display: inline-block !important;
+    a{
+      display: inline-block;
+    }
+  }
+}
+.navbar-header{
+  margin: 5px 5px;
+  padding-top: 7px;
+}
+.main-navbar-header{
+  background-color: black;
+  width: 100%;
+  display: inline-block;
+  .container{
+    width: 100%;
+  }
+}
+.main-buttons{
+  float: right !important;
+}
+.inline-block{
+  display: inline-block;
+}
+
+.navbar-collapse{
+  border-top: none !important;
+  box-shadow: none !important;
+}
+
+.main-navbar{
+  display: inline-block;
+  float: right;
+  button{
+    display: inline-block;
+    a{
+      display: inline-block;
+      margin-left: 5px;
+    }
+  }
+  @media all and (max-width: 590px){
+    display: none !important;
+  }
+}
+
+.profile-button{
+  //background: image-url("profile.png");
+  width: 60px;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0;
+}
+.profile-dropdown{
+  background-color: $dark-grey;
+  > a{
+    color: #9d9d9d;
+    padding: 10px 15px;
+    display: block;
+    
+    &:hover{
+      text-decoration: none;
+      background-color: indigo;
+      
+    }
+  }
+}
+.hamburger-menu{
+  float: right;
+}
+
+.hamburger{
+  border: 0;
+  background-color: gray !important;
+  .icon-bar{
+    background-color: white;
+  }
+  @media all and (min-width: 590px){
+    display: none !important;
+  }
+  .side-menu{
+    list-style: none;
+    float: right;
+    padding: 5px 10px;
+    position: fixed;
+    right: 0px;
+    top: 42px;
+    z-index: 1000;
+    background-color: black;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    
+    
+    @media all and (min-width: 590px){
+      display: none !important;
+    }
+    @media all and (max-width: 590px){
+      width: 30%;
+    }
+    @media all and (min-width: 490px) and (max-width: 590px){
+      width: 40%;
+    }
+    @media all and (max-width: 490px){
+      width: 50%;
+    }
+    
+    > li a{
+      display: block;
+      text-align: right;
+      text-decoration: none;
+      padding: 8px 15px;
+      color: white;
+      &:hover{
+        background-color: indigo;
+      }
+    }
+  }
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.3em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 2px;
+  font-weight: bold;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
