@@ -1,0 +1,9 @@
+.li
+    .row
+        .col-md-8
+            .drawing-container
+                .drawing-info
+                    %p= drawing.title
+                .drawing-image
+                    -if drawing.attachment.present?
+                        %img{:src => drawing.attachment_url}

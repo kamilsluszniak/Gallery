@@ -1,0 +1,12 @@
+<%= form_for @drawing do |f| %>
+    <%= render 'shared/error_messages', object: @drawing %>
+    
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    
+    <%= f.label :attachment %>
+    <%= f.file_field :attachment %>
+    
+    <%= f.submit "Dodaj rysunek", class: "btn btn-primary" %>
+
+<% end %>
