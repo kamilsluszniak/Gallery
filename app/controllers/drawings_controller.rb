@@ -18,7 +18,7 @@ class DrawingsController < ApplicationController
         @drawing = @user.drawings.create(drawing_params)
         
         if @drawing.save
-            flash[:success] = "Rysunek dodany"
+            flash[:success] = "New drawing added."
             redirect_to root_url
         else
             render 'new'

@@ -12,14 +12,17 @@
 
 ActiveRecord::Schema.define(version: 20170117150343) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "drawings", force: :cascade do |t|
     t.string   "title"
     t.string   "attachment"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id", "created_at"], name: "index_drawings_on_user_id_and_created_at"
-    t.index ["user_id"], name: "index_drawings_on_user_id"
+    t.index ["user_id", "created_at"], name: "index_drawings_on_user_id_and_created_at", using: :btree
+    t.index ["user_id"], name: "index_drawings_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,11 +46,12 @@ ActiveRecord::Schema.define(version: 20170117150343) do
     t.datetime "locked_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["name"], name: "index_users_on_name", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["name"], name: "index_users_on_name", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+    t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
   end
 
+  add_foreign_key "drawings", "users"
 end

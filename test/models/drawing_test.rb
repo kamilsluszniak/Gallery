@@ -8,13 +8,8 @@ class DrawingTest < ActiveSupport::TestCase
     @drawing = drawings(:drawing_with_attachment)
   end
   
-  test "validates user id" do
-    drawing = Drawing.new(:attachment => fixture_file_upload('/files/squirrel.jpg', 'image/jpg'), :title => "title")
-    assert_not drawing.valid?
-  end
-  
   test "validates attachment param" do
-    drawing = Drawing.new(:title => "title", :title => "title")
+    drawing = Drawing.new(:title => "title")
     assert_not drawing.valid?
   end
   

@@ -1,1 +1,84 @@
-po rejestracji i po aktywacji nie pokazuje flasha z informacją że email wysłany
+2016-06-09 08:24:41 UTC LOG:  database system was shut down at 2016-06-09 08:24:39 UTC
+2016-06-09 08:24:41 UTC LOG:  MultiXact member wraparound protections are now enabled
+2016-06-09 08:24:41 UTC LOG:  autovacuum launcher started
+2016-06-09 08:24:41 UTC LOG:  database system is ready to accept connections
+2016-06-09 08:24:41 UTC LOG:  incomplete startup packet
+2016-06-09 08:31:13 UTC LOG:  database system was interrupted; last known up at 2016-06-09 08:24:43 UTC
+2016-06-09 08:31:13 UTC LOG:  incomplete startup packet
+2016-06-09 08:31:14 UTC FATAL:  the database system is starting up
+2016-06-09 08:31:14 UTC FATAL:  the database system is starting up
+2016-06-09 08:31:15 UTC FATAL:  the database system is starting up
+2016-06-09 08:31:15 UTC FATAL:  the database system is starting up
+2016-06-09 08:31:16 UTC FATAL:  the database system is starting up
+2016-06-09 08:31:16 UTC LOG:  database system was not properly shut down; automatic recovery in progress
+2016-06-09 08:31:16 UTC LOG:  redo starts at 0/1782F48
+2016-06-09 08:31:16 UTC LOG:  record with zero length at 0/1782F88
+2016-06-09 08:31:16 UTC LOG:  redo done at 0/1782F48
+2016-06-09 08:31:16 UTC LOG:  last completed transaction was at log time 2016-06-09 08:24:44.084453+00
+2016-06-09 08:31:16 UTC LOG:  MultiXact member wraparound protections are now enabled
+2016-06-09 08:31:16 UTC LOG:  autovacuum launcher started
+2016-06-09 08:31:16 UTC LOG:  database system is ready to accept connections
+2017-01-29 21:32:19 UTC LOG:  database system was interrupted; last known up at 2016-06-09 08:31:16 UTC
+2017-01-29 21:32:19 UTC LOG:  incomplete startup packet
+2017-01-29 21:32:20 UTC FATAL:  the database system is starting up
+2017-01-29 21:32:20 UTC FATAL:  the database system is starting up
+2017-01-29 21:32:21 UTC FATAL:  the database system is starting up
+2017-01-29 21:32:21 UTC FATAL:  the database system is starting up
+2017-01-29 21:32:22 UTC FATAL:  the database system is starting up
+2017-01-29 21:32:22 UTC FATAL:  the database system is starting up
+2017-01-29 21:32:23 UTC FATAL:  the database system is starting up
+2017-01-29 21:32:23 UTC FATAL:  the database system is starting up
+2017-01-29 21:32:24 UTC FATAL:  the database system is starting up
+2017-01-29 21:32:24 UTC FATAL:  the database system is starting up
+2017-01-29 21:32:24 UTC LOG:  database system was not properly shut down; automatic recovery in progress
+2017-01-29 21:32:24 UTC LOG:  record with zero length at 0/1782FF0
+2017-01-29 21:32:24 UTC LOG:  redo is not required
+2017-01-29 21:32:24 UTC LOG:  MultiXact member wraparound protections are now enabled
+2017-01-29 21:32:24 UTC LOG:  database system is ready to accept connections
+2017-01-29 21:32:24 UTC LOG:  autovacuum launcher started
+2017-01-29 21:34:12 UTC LOG:  could not receive data from client: Connection reset by peer
+2017-01-29 21:35:40 UTC ERROR:  new encoding (UTF8) is incompatible with the encoding of the template database (SQL_ASCII)
+2017-01-29 21:35:40 UTC HINT:  Use the same encoding as in the template database, or use template0 as template.
+2017-01-29 21:35:40 UTC STATEMENT:  CREATE DATABASE "gallery_development" ENCODING = 'unicode'
+2017-01-29 21:37:24 UTC ERROR:  new encoding (UTF8) is incompatible with the encoding of the template database (SQL_ASCII)
+2017-01-29 21:37:24 UTC HINT:  Use the same encoding as in the template database, or use template0 as template.
+2017-01-29 21:37:24 UTC STATEMENT:  CREATE DATABASE "gallery_development" ENCODING = 'unicode'
+2017-01-30 09:03:25 UTC LOG:  database system was interrupted; last known up at 2017-01-29 21:32:24 UTC
+2017-01-30 09:03:25 UTC LOG:  database system was not properly shut down; automatic recovery in progress
+2017-01-30 09:03:25 UTC LOG:  record with zero length at 0/1783058
+2017-01-30 09:03:25 UTC LOG:  redo is not required
+2017-01-30 09:03:25 UTC LOG:  MultiXact member wraparound protections are now enabled
+2017-01-30 09:03:25 UTC LOG:  autovacuum launcher started
+2017-01-30 09:03:25 UTC LOG:  database system is ready to accept connections
+2017-01-30 09:03:25 UTC LOG:  incomplete startup packet
+2017-01-30 09:04:59 UTC ERROR:  new encoding (UTF8) is incompatible with the encoding of the template database (SQL_ASCII)
+2017-01-30 09:04:59 UTC HINT:  Use the same encoding as in the template database, or use template0 as template.
+2017-01-30 09:04:59 UTC STATEMENT:  CREATE DATABASE "gallery_development" ENCODING = 'unicode'
+2017-01-30 09:16:21 UTC LOG:  provided user name (gallery) and authenticated user name (ubuntu) do not match
+2017-01-30 09:16:21 UTC FATAL:  Peer authentication failed for user "gallery"
+2017-01-30 09:16:21 UTC DETAIL:  Connection matched pg_hba.conf line 90: "local   all             all                                     peer"
+2017-01-30 09:23:41 UTC ERROR:  database "gallery_development" already exists
+2017-01-30 09:23:41 UTC STATEMENT:  CREATE DATABASE "gallery_development" ENCODING = 'unicode'
+2017-01-30 09:23:41 UTC ERROR:  database "gallery_test" already exists
+2017-01-30 09:23:41 UTC STATEMENT:  CREATE DATABASE "gallery_test" ENCODING = 'unicode'
+2017-01-30 09:23:41 UTC LOG:  provided user name (kamil_sluszniak) and authenticated user name (ubuntu) do not match
+2017-01-30 09:23:41 UTC FATAL:  Peer authentication failed for user "kamil_sluszniak"
+2017-01-30 09:23:41 UTC DETAIL:  Connection matched pg_hba.conf line 90: "local   all             all                                     peer"
+2017-01-31 15:18:20 UTC LOG:  database system was interrupted; last known up at 2017-01-30 14:31:10 UTC
+2017-01-31 15:18:20 UTC LOG:  database system was not properly shut down; automatic recovery in progress
+2017-01-31 15:18:20 UTC LOG:  record with zero length at 0/1822838
+2017-01-31 15:18:20 UTC LOG:  redo is not required
+2017-01-31 15:18:20 UTC LOG:  MultiXact member wraparound protections are now enabled
+2017-01-31 15:18:20 UTC LOG:  autovacuum launcher started
+2017-01-31 15:18:20 UTC LOG:  database system is ready to accept connections
+2017-01-31 15:18:20 UTC LOG:  incomplete startup packet
+2017-01-31 15:29:21 UTC LOG:  database system was interrupted; last known up at 2017-01-31 15:18:20 UTC
+2017-01-31 15:29:21 UTC LOG:  database system was not properly shut down; automatic recovery in progress
+2017-01-31 15:29:21 UTC LOG:  redo starts at 0/18228A0
+2017-01-31 15:29:21 UTC LOG:  record with zero length at 0/18231A0
+2017-01-31 15:29:21 UTC LOG:  redo done at 0/1823170
+2017-01-31 15:29:21 UTC LOG:  last completed transaction was at log time 2017-01-31 15:27:56.931055+00
+2017-01-31 15:29:21 UTC LOG:  MultiXact member wraparound protections are now enabled
+2017-01-31 15:29:21 UTC LOG:  database system is ready to accept connections
+2017-01-31 15:29:21 UTC LOG:  autovacuum launcher started
+2017-01-31 15:29:21 UTC LOG:  incomplete startup packet
