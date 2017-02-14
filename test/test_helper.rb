@@ -15,4 +15,8 @@ class ActiveSupport::TestCase
     super
     CarrierWave.clean_cached_files!(0)
   end
+  
+  def log_in(user, password)
+    post user_session_path, params:  {:user => { :email => user.email, :password => password}}
+  end
 end

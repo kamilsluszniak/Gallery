@@ -5,3 +5,9 @@ drawing_with_attachment:
   attachment: 'squirrel.jpg'
   user: ahmed
   title: <%= "t" * 80 %>
+  
+drawing_to_destroy:
+  id: 2
+  attachment: 'squirrel.jpg'
+  user: ahmed
+  title: "title"

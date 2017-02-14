@@ -35,7 +35,7 @@ gem 'mini_magick', '~> 4.3'
 gem 'haml'
 gem 'fog'
 gem 'devise'
-gem 'factory_girl', '~> 4.8.0'
+gem 'factory_girl_rails', '~> 4.8.0'
 gem "figaro"
 
 # Use Redis adapter to run Action Cable in production
@@ -74,6 +74,8 @@ end
 
 group :test do
   gem 'webmock'
+  gem 'database_cleaner'
+  gem 'rails-controller-testing'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

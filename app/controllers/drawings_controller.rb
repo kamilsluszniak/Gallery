@@ -3,7 +3,7 @@ class DrawingsController < ApplicationController
     before_action :logged_in_user, only: [:new, :create, :destroy, :edit, :update]
     
     def index
-        @drawings = Drawing.order(:created_at).page(params[:page]).per(10)
+        @drawings = Drawing.order(:updated_at).page(params[:page]).per(10)
     end
     
     def show
@@ -19,16 +19,33 @@ class DrawingsController < ApplicationController
         
         if @drawing.save
             flash[:success] = "New drawing added."
-            redirect_to root_url
+            redirect_to @drawing
         else
             render 'new'
         end
     end
     
+    def edit
+        
+    end
+    
     def destroy
+        if @drawing.destroy
+            flash[:success] = "Drawing deleted."
+            redirect_to drawings_url
+        else
+            flash[:danger] = "Problem with deleting."
+        end
     end
     
     def update
+        if @drawing.update_attributes(drawing_params)
+            flash[:success] = "Drawing updated."
+            redirect_to @drawing
+        else
+            flash[:danger] = "Incorrect attributes."
+            redirect_to edit_drawing_url
+        end
     end
     
     private
