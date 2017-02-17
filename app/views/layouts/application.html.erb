@@ -12,11 +12,14 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
-    <% flash.each do |key, value| %>
-      <%= content_tag :div, value, :class => "flash #{key}" unless value.blank? %>
-    <% end %>
+    <div id="main-container">
+      <%= render 'layouts/header' %>
+      <% flash.each do |key, value| %>
+        <%= content_tag :div, value, :class => "flash #{key}" unless value.blank? %>
+      <% end %>
     
-    <%= yield %>
+      <%= yield %>
+    </div>
+    
   </body>
 </html>

@@ -1,7 +1,12 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
 
 $dark-grey: #222222;
+
+@mixin button-red {
+  background-color: #E74C3C;
+	border-bottom: 5px solid #BD3E31;
+	text-shadow: 0px -2px #BD3E31;
+}
 
 .nav{
   li{
@@ -53,6 +58,10 @@ $dark-grey: #222222;
   }
 }
 
+.navlist{
+  margin-bottom: 0 !important;
+}
+
 .profile-button{
   //background: image-url("profile.png");
   width: 60px;
@@ -81,7 +90,7 @@ $dark-grey: #222222;
 
 .hamburger{
   border: 0;
-  background-color: gray !important;
+  background-color: #e3301c !important;
   .icon-bar{
     background-color: white;
   }
@@ -121,7 +130,7 @@ $dark-grey: #222222;
       padding: 8px 15px;
       color: white;
       &:hover{
-        background-color: indigo;
+        background-color: #e3301c;
       }
     }
   }
@@ -130,14 +139,45 @@ $dark-grey: #222222;
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.3em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 2px;
-  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+	font-size: 26px;
+  color: #e3301c;
+  margin-left: 20px;
+
   &:hover {
     color: #fff;
     text-decoration: none;
   }
 }
+
+.action-button
+{
+	position: relative;
+	padding: 5px 10px;
+  float: left;
+	border-radius: 10px;
+	font-family: 'Pacifico', cursive;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-decoration: none !important;	
+	@include button-red;
+	
+	&:active{
+	  transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+	  border-bottom: 1px solid;
+  }
+  &:hover{
+    color: #FFFFFF;
+    background-color: #e3301c;
+  }
+}
+
+
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+
