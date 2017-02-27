@@ -1,0 +1,8 @@
+%tr
+    %td= user.name
+    %td= user.email
+    - if user.approved
+        %td= "User approved"
+    - else
+        %td= "User not approved"
+        %td= link_to "Approve this user", approve_path(:id => user.id), method: :post

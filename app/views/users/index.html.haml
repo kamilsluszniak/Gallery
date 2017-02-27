@@ -1,0 +1,9 @@
+%table.table.table-condensed
+    %thead
+        %tr
+            %th= t('user.columns.name')
+            %th= t('user.columns.email')
+            %th= t('user.columns.approved')
+            %th= "Action"
+    %tbody
+        = render @users
