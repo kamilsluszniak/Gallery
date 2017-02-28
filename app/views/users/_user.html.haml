@@ -1,7 +1,11 @@
 %tr
     %td= user.name
     %td= user.email
-    - if user.approved
+    - if user.confirmed?
+        %td= "User confirmed"
+    - else
+        %td= "User not confirmed yet"
+    - if user.approved?
         %td= "User approved"
     - else
         %td= "User not approved"
