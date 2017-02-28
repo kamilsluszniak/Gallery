@@ -37,6 +37,7 @@ gem 'fog'
 gem 'devise'
 gem 'factory_girl_rails', '~> 4.8.0'
 gem "figaro"
+gem "font-awesome-rails"
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
