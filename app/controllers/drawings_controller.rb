@@ -1,6 +1,6 @@
 class DrawingsController < ApplicationController
     before_action :set_drawing, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user!
+    before_action :authenticate_user!, only: [:edit, :update, :destroy, :new, :create]
     
     def index
         @drawings = Drawing.order(:updated_at).page(params[:page]).per(10)
