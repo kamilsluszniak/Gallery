@@ -11,7 +11,7 @@ class User < ApplicationRecord
   end 
 
   def inactive_message 
-    if !approved? 
+    if !approved?
       :not_approved 
     else 
       super # Use whatever other message 
