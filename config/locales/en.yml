@@ -25,4 +25,7 @@ en:
         name: Name
         email: e-mail
         approved: Approved
-        
+  shared:
+    edit: edit
+    show: show
+    delete: delete

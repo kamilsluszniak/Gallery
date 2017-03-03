@@ -3,7 +3,12 @@ class DrawingsController < ApplicationController
     before_action :authenticate_user!, only: [:edit, :update, :destroy, :new, :create]
     
     def index
-        @drawings = Drawing.order(:updated_at).page(params[:page]).per(10)
+        if params[:user]
+            @user = User.find(params[:user][:id])
+            @drawings = @user.drawings.page(params[:page]).per(10)
+        else
+            @drawings = Drawing.page(params[:page]).per(10)
+        end
     end
     
     def show

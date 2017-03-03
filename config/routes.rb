@@ -1,17 +1,19 @@
 Rails.application.routes.draw do
   
-  get 'users/index'
 
   root 'static_pages#home'
   
   get 'static_pages/home' => 'static_pages#home'
   
-  match '/users',   to: 'users#index',   via: 'get'
   match '/approve', to: 'users#approve', via: 'post'
   
   devise_for :users
   
   resources :drawings
+  resources :users do
+      resources :drawings
+  end
+  
 
 
    #, :controllers => { :registrations => "users/registrations" } #  users/registrations_controller.rb

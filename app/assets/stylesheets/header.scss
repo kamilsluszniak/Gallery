@@ -4,6 +4,9 @@ $dark-grey: #222222;
 
 @mixin button-red {
   background-color: #E74C3C;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid #BD3E31;
 	border-bottom: 5px solid #BD3E31;
 	text-shadow: 0px -2px #BD3E31;
 }
@@ -24,7 +27,7 @@ $dark-grey: #222222;
   }
 }
 .main-navbar-header{
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   display: inline-block;
   .container{
@@ -180,4 +183,7 @@ $dark-grey: #222222;
 	-webkit-transition: all 0.1s;
 }
 
+.dropdown{
+  display: inline-block;
+}
 

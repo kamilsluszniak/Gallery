@@ -7,3 +7,10 @@
                         %img{:src => drawing.attachment_url}
                 .drawing-info
                     %p= drawing.title
+                .drawing-actions
+                    = link_to edit_drawing_path(drawing), { title: t('shared.edit') } do
+                        %button.btn.btn-default
+                            = fa_icon "pencil"
+                    = link_to edit_drawing_path(drawing), { title: t('shared.delete') } do
+                        %button.btn.btn-default
+                            = fa_icon "trash"

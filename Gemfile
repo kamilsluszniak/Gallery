@@ -38,6 +38,7 @@ gem 'devise'
 gem 'factory_girl_rails', '~> 4.8.0'
 gem "figaro"
 gem "font-awesome-rails"
+gem 'jquery-datatables-rails', '~> 3.4.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
