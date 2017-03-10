@@ -23,10 +23,14 @@ CarrierWave.configure do |config|
   # For testing, upload files to local `tmp` folder.
   if Rails.env.production?
     config.storage = :fog
-  else
+    config.enable_processing = true
+  elsif Rails.env.test?
     config.storage = :file
-    config.enable_processing = false
+    config.enable_processing = true
     config.root = "#{Rails.root}/test/fixtures/files"
+  elsif Rails.env.development?
+    config.storage = :file
+    config.enable_processing = true
   end
   
   

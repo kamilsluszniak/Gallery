@@ -14,12 +14,14 @@
   <body>
     <div id="main-container">
       <%= render 'layouts/header' %>
-      <% flash.each do |key, value| %>
-        <%= content_tag :div, value, :class => "flash #{key}" unless value.blank? %>
-      <% end %>
-    
+      <div id="flash-messages">
+        <% flash.each do |key, value| %>
+          <%= content_tag :div, value, :class => "flash #{key}" unless value.blank? %>
+        <% end %>
+      </div>
       <%= yield %>
     </div>
+    <div class="clear-both"></div>
     
   </body>
 </html>

@@ -13,15 +13,23 @@
     .drawing-image{
         display: inline-block;
         img{
-            width: 250px;
+            max-width: 800px;
         }
     }
 }
 
 .drawings{
+    list-style: none;
     li{
         display: inline-block;
         padding-right: 25px;
+    }
+}
+
+.drawing-list{
+    list-style: none;
+    li{
+        text-align: center;
     }
 }
 .drawing-info{
@@ -32,6 +40,5 @@
 }
 
 .drawing-actions{
-    width: 80px;
-    margin: 0 auto;
+    text-align: center;
 }
