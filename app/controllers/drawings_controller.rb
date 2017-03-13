@@ -8,6 +8,7 @@ class DrawingsController < ApplicationController
             @drawings = @user.drawings.page(params[:page]).per(10)
         else
             @drawings = Drawing.page(params[:page]).per(10)
+            @latest_id = @drawings.first.id
         end
     end
     

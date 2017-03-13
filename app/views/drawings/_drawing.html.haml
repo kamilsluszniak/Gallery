@@ -1,5 +1,7 @@
-%li
+%li{:id => ("latest" if drawing.id == @latest_id)}
     .drawing-container
+        -if drawing.id == @latest_id
+            %p= "Latest drawing"
         .drawing-image
             -if drawing.attachment.present?
                 -if controller.action_name == "index"
