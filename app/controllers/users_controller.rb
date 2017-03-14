@@ -6,6 +6,8 @@ class UsersController < ApplicationController
     if current_user && current_user.admin?
       @users = User.where("confirmed_at IS NOT NULL")
     end
+    
+    
   end
   
   def show
