@@ -5,9 +5,7 @@ class UsersController < ApplicationController
   def index
     if current_user && current_user.admin?
       @users = User.where("confirmed_at IS NOT NULL")
-    end
-    
-    
+    #do poprawy - błąd jak wchodzi tu nie-admin
   end
   
   def show
