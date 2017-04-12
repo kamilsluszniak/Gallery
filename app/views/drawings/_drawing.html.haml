@@ -11,6 +11,8 @@
                     %img{:src => drawing.attachment_url}
         .drawing-info
             %p= drawing.title
+            -if drawing.program.present?
+                %p.program Created in: #{drawing.program}
         - if current_user && (drawing.user_id == current_user.id)
             .drawing-actions
                 = link_to edit_drawing_path(drawing), { title: t('shared.edit') } do
