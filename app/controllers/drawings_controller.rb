@@ -19,8 +19,6 @@ class DrawingsController < ApplicationController
         @prev = Drawing.where('id = ?', (@id - 1).to_s).select([:id]).first
         @next = Drawing.where('id = ?', (@id + 1).to_s).select([:id]).first
         @nav = {:prev => @prev, :next => @next}
-        puts "locals:"
-        puts @nav.inspect
     end
     
     def new

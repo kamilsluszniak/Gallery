@@ -28,7 +28,6 @@
             %button.btn.btn-default
                 = fa_icon "times"
     .nav-next
-        - puts nav.inspect
         -unless nav[:next].nil?
             = link_to drawing_path(nav[:next]), { title: t('shared.next') } do
                 %button.btn.btn-default
