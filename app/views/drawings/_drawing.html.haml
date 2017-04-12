@@ -20,18 +20,20 @@
                     %button.btn.btn-default
                         = fa_icon "trash"
     .nav-prev
-        -unless nav[:prev].nil?
-            = link_to drawing_path(nav[:prev]), { title: t('shared.prev') } do
+        -if defined? nav
+            -unless nav[:prev].nil?
+                = link_to drawing_path(nav[:prev]), { title: t('shared.prev') } do
+                    %button.btn.btn-default
+                        = fa_icon "backward"
+            -else 
                 %button.btn.btn-default
-                    = fa_icon "backward"
-        -else 
-            %button.btn.btn-default
-                = fa_icon "times"
+                    = fa_icon "times"
     .nav-next
-        -unless nav[:next].nil?
-            = link_to drawing_path(nav[:next]), { title: t('shared.next') } do
+        -if defined? nav
+            -unless nav[:next].nil?
+                = link_to drawing_path(nav[:next]), { title: t('shared.next') } do
+                    %button.btn.btn-default
+                        = fa_icon "forward"
+            -else 
                 %button.btn.btn-default
-                    = fa_icon "forward"
-        -else 
-            %button.btn.btn-default
-                = fa_icon "times"
+                    = fa_icon "times"
