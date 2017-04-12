@@ -5,7 +5,9 @@ class UsersController < ApplicationController
   def index
     if current_user && current_user.admin?
       @users = User.where("confirmed_at IS NOT NULL")
-    #do poprawy - błąd jak wchodzi tu nie-admin
+      flash[:danger] = "Users list is only available to admin users"
+      redirect_to root_url
+    end
   end
   
   def show

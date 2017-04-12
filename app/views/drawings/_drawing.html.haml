@@ -19,3 +19,20 @@
                 = link_to edit_drawing_path(drawing), { title: t('shared.delete') } do
                     %button.btn.btn-default
                         = fa_icon "trash"
+    .nav-prev
+        -unless nav[:prev].nil?
+            = link_to drawing_path(nav[:prev]), { title: t('shared.prev') } do
+                %button.btn.btn-default
+                    = fa_icon "backward"
+        -else 
+            %button.btn.btn-default
+                = fa_icon "times"
+    .nav-next
+        - puts nav.inspect
+        -unless nav[:next].nil?
+            = link_to drawing_path(nav[:next]), { title: t('shared.next') } do
+                %button.btn.btn-default
+                    = fa_icon "forward"
+        -else 
+            %button.btn.btn-default
+                = fa_icon "times"

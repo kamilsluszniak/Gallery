@@ -29,3 +29,5 @@ en:
     edit: edit
     show: show
     delete: delete
+    prev: previous
+    next: next

@@ -1,6 +1,7 @@
 class DrawingsController < ApplicationController
-    before_action :set_drawing, only: [:show, :edit, :update, :destroy]
+    before_action :set_drawing, only: [:edit, :update, :destroy]
     before_action :authenticate_user!, only: [:edit, :update, :destroy, :new, :create]
+    respond_to :html, :js
     
     def index
         if params[:user]
@@ -13,6 +14,13 @@ class DrawingsController < ApplicationController
     end
     
     def show
+        @id = params[:id].to_i
+        @drawing = Drawing.find(@id)
+        @prev = Drawing.where('id = ?', (@id - 1).to_s).select([:id]).first
+        @next = Drawing.where('id = ?', (@id + 1).to_s).select([:id]).first
+        @nav = {:prev => @prev, :next => @next}
+        puts "locals:"
+        puts @nav.inspect
     end
     
     def new

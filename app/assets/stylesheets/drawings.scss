@@ -20,7 +20,7 @@
         text-align: center;
         font-family: 'Pacifico', cursive;
         font-size: 24px;
-        color: #F5DFDF;
+        color: white;
     }
 }
 
@@ -34,6 +34,10 @@
 
 #latest{
     display: block;
+}
+
+.drawing{
+    list-style: none;
 }
 
 .drawing-list{
@@ -51,4 +55,13 @@
 
 .drawing-actions{
     text-align: center;
+}
+.nav-prev{
+    float: left;
+    margin-top: 300px;
+}
+
+.nav-next{
+    float: right;
+    margin-top: 300px;
 }
