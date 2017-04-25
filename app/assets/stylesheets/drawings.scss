@@ -7,13 +7,16 @@
     padding-bottom: 20px;
     margin-top: 30px;
     border: 1px solid #ccc;
+    
+    
     &:hover {
         border: 1px solid #777;
     }
     .drawing-image{
         display: inline-block;
+        
         img{
-            max-width: 800px;
+            width: 100%;
         }
     }
     p{
@@ -21,6 +24,21 @@
         font-family: 'Pacifico', cursive;
         font-size: 24px;
         color: white;
+    }
+}
+
+#single-drawing{
+    @media all and (max-width: 328px){
+        width: 70%;
+    }
+    @media all and (min-width: 329px) and (max-width: 430px){
+        width: 75%;
+    }
+    @media all and (min-width: 431px) and (max-width: 899px){
+        width: 80%;
+    }
+    @media all and (min-width: 900px){
+        width: 87%;
     }
 }
 
@@ -38,12 +56,14 @@
 
 .drawing{
     list-style: none;
+    padding-left: 0;
 }
 
 .drawing-list{
     list-style: none;
     li{
         text-align: center;
+        margin: 0 5px;
     }
 }
 .drawing-info{
@@ -61,10 +81,10 @@
 }
 .nav-prev{
     float: left;
-    margin-top: 300px;
+    margin-top: 25%;
 }
 
 .nav-next{
     float: right;
-    margin-top: 300px;
+    margin-top: 25%;
 }

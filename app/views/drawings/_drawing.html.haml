@@ -1,5 +1,5 @@
 %li{:id => ("latest" if drawing.id == @latest_id)}
-    .drawing-container
+    .drawing-container{ id: ( "single-drawing" if (controller.action_name != "index") ) }
         -if drawing.id == @latest_id
             %p= "Latest drawing"
         .drawing-image
